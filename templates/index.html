@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NetIQ - Networking Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="relative bg-gradient-to-r from-cyan-500 to-indigo-600 text-white py-6 text-center">
+    <h1 class="text-3xl font-bold">NetIQ Networking Assistant</h1>
+    <p class="text-lg mt-1 opacity-90">Your Professional AI Companion for Network Queries</p>
+  </header>
+
+  <main class="container mx-auto px-4 py-8 space-y-16">
+    <section class="text-center">
+      <h2 class="text-2xl font-semibold mb-4">One-to-One Voice Interaction</h2>
+      <button onclick="startListening()" aria-label="Start Voice Chat">
+        <img
+          src="https://cdn.dribbble.com/userupload/32122583/file/original-400827bdf243931c8ffd26a268a837ce.gif"
+          alt="Voice Bot Banner"
+          class="mx-auto w-full max-w-xl rounded-2xl shadow-lg hover:scale-105 transition-transform"
+        />
+      </button>
+      
+    </section>
+
+    <!-- Voice Interaction with Chat Bubbles -->
+    <section class="max-w-xl mx-auto">
+      
+      <div class="text-center mb-6">
+        <button 
+          onclick="startListening()" 
+          class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg shadow-md transition"
+        >
+          🎙️Start Voice Chat
+        </button>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 space-y-6">
+        <!-- User Message -->
+        <div id="userBox" class="hidden">
+          <p class="text-sm text-gray-500 mb-1">You:</p>
+          <div class="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-lg max-w-full">
+            <span id="userText"></span>
+          </div>
+        </div>
+        <!-- Bot Message -->
+        <div id="botBox" class="hidden">
+          <p class="text-sm text-gray-500 mb-1">NetIQ:</p>
+          <div class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-lg max-w-full">
+            <span id="botText"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Chat Section -->
+    <section class="text-center">
+      <h2 class="text-2xl font-semibold mb-6">💬 Live Chat with NetIQ</h2>
+      <iframe
+        src="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/04/21/16/20250421160557-1PDY6P62.json"
+        class="w-full max-w-4xl h-96 mx-auto rounded-xl shadow-lg border-0"
+      ></iframe>
+    </section>
+
+     <!-- Features Gallery -->
+    <section>
+      <h2 class="text-2xl font-semibold text-center mb-8">Key Features</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center">
+          <img 
+            src="https://img.freepik.com/premium-vector/ai-chat-bot-technology-concept-people-chatting-with-robot-asking-questions-receiving-answers_36358-1867.jpg" 
+            alt="AI Suggestions"
+            class="mx-auto w-36 h-36  rounded mb-4"
+          />
+          <h3 class="font-semibold text-lg">AI-Powered Suggestions</h3>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center">
+          <img 
+            src="https://i.pinimg.com/originals/7d/9b/1d/7d9b1d662b28cd365b33a01a3d0288e1.gif" 
+            alt="Real-Time Voice Chat"
+            class="mx-auto w-36 h-36 object-cover rounded-full mb-4"
+          />
+      
+          <h3 class="font-semibold text-lg">Real-Time Voice Chat</h3>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center">
+          <img 
+            src="https://itsm.tools/wp-content/uploads/2021/11/bot-and-human.png" 
+            alt="Human-Bot Collaboration"
+            class="mx-auto w-36 h-36  rounded mb-4"
+          />
+          <h3 class="font-semibold text-lg">Human-Bot Collaboration</h3>
+        </div>
+       
+        
+      </div>
+    </section>
+
+
+    <!-- Feedback Button -->
+    <section class="text-center">
+      <h2 class="text-2xl font-semibold mb-4">We Value Your Feedback</h2>
+      <p class="mb-6 text-gray-600">Help us improve by sharing your thoughts via our feedback form.</p>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSc2N8OGqdbu2HFbxN4Y89Guv3Wnp9CHLYrz-bzu80kDjHQ3yg/viewform?usp=sharing"
+        target="_blank"
+        class="inline-block bg-gradient-to-r from-indigo-500 to-cyan-400 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:from-indigo-600 hover:to-cyan-500 transition"
+      >
+        Give Feedback
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-b from-cyan-500 to-indigo-600 text-white py-10 text-center">
+    <h2 class="text-2xl font-bold mb-4">About NetIQ</h2>
+    <p class="max-w-2xl mx-auto mb-6">
+      NetIQ assists students and professionals by providing accurate, real-time answers to networking questions through voice and chat interactions.
+    </p>
+    <div class="space-y-2">
+      <p>📞 <a href="tel:+919369572534" class="underline">+91 93695 72534</a></p>
+      <p>✉️ <a href="mailto:ambuj20maurya@gmail.com" class="underline">ambuj20maurya@gmail.com</a></p>
+      <p>📍 Mirzapur, Uttar Pradesh, India</p>
+    </div>
+    <p class="mt-6 text-sm">&copy; 2025 NetIQ Networking Assistant. All rights reserved.</p>
+  </footer>
+
+  <!-- Voice Assistant Script -->
+  <script>
+    function startListening() {
+      const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!Recognition) {
+        alert("Your browser does not support speech recognition.");
+        return;
+      }
+      const recognition = new Recognition();
+      recognition.lang = "en-US";
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.start();
+
+      recognition.onresult = (event) => {
+        const user_input = event.results[0][0].transcript;
+        // Show user bubble
+        document.getElementById("userBox").classList.remove("hidden");
+        document.getElementById("userText").textContent = user_input;
+
+        // Fetch bot response
+        fetch("/get_response", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ user_input })
+        })
+        .then(res => res.json())
+        .then(data => {
+          const botReply = data.response;
+          document.getElementById("botBox").classList.remove("hidden");
+          document.getElementById("botText").textContent = botReply;
+          speechSynthesis.speak(new SpeechSynthesisUtterance(botReply));
+        })
+        .catch(err => console.error("Error:", err));
+      };
+    }
+  </script>
+
+</body>
+</html>

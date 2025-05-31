@@ -1,17 +1,4 @@
-# macOS / Linux
-python3 -m venv venv
-source venv/bin/activate
-
-# Windows (PowerShell)
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-
-
 Flask>=2.0.0
 Flask-Cors>=3.0.0
 requests>=2.25.0
-python-dotenv>=0.20.0       # for loading env vars from a .env file
-
-pip install -r requirements.txt
-
-python app.py
+python-dotenv>=0.20.0
